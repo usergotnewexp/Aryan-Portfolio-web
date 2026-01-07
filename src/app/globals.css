@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 97%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 220 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 25% 10%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 220 70% 50%;
+
+    --radius: 0.75rem;
+
+    /* Data Science themed colors */
+    --gradient-start: 199 89% 48%;
+    --gradient-mid: 262 83% 58%;
+    --gradient-end: 330 81% 60%;
+    --data-cyan: 187 92% 69%;
+    --data-purple: 262 83% 68%;
+    --data-blue: 217 91% 60%;
+    --neural-glow: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 222 47% 4%;
+
+    --secondary: 217 32% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 12%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 15%;
+    --input: 217 32% 15%;
+    --ring: 199 89% 48%;
+
+    /* Data Science themed colors - dark mode */
+    --gradient-start: 199 89% 48%;
+    --gradient-mid: 262 83% 58%;
+    --gradient-end: 330 81% 60%;
+    --data-cyan: 187 92% 69%;
+    --data-purple: 262 83% 68%;
+    --data-blue: 217 91% 60%;
+    --neural-glow: 199 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(at 10% 20%, hsl(var(--data-cyan) / 0.08) 0px, transparent 50%),
+      radial-gradient(at 90% 10%, hsl(var(--data-purple) / 0.10) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, hsl(var(--data-blue) / 0.05) 0px, transparent 60%),
+      radial-gradient(at 80% 80%, hsl(var(--data-cyan) / 0.06) 0px, transparent 50%),
+      radial-gradient(at 20% 80%, hsl(var(--data-purple) / 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: gradient-flow 90s ease-in-out infinite;
+  }
+}
+
+/* Gradient flow animation - very slow and subtle */
+@keyframes gradient-flow {
+
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Neural pulse animation */
+@keyframes neural-pulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Data flow animation */
+@keyframes data-flow {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Glow effect */
+@keyframes glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(var(--data-cyan) / 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px hsl(var(--data-cyan) / 0.5), 0 0 60px hsl(var(--data-purple) / 0.3);
+  }
+}
+
+/* Typing cursor blink */
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Float animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Shimmer effect for cards */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--data-cyan)), hsl(var(--data-purple)), hsl(var(--data-blue)));
+  }
+
+  .text-gradient-animated {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--data-cyan)), hsl(var(--data-purple)), hsl(var(--data-blue)), hsl(var(--data-cyan)));
+    background-size: 300% 300%;
+    animation: gradient-flow 4s ease infinite;
+  }
+
+  .bg-glass {
+    @apply bg-card/70 backdrop-blur-xl border border-border/50;
+  }
+
+  .bg-glass-hover {
+    @apply bg-glass hover:bg-card/90 hover:border-primary/30 transition-all duration-300;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px hsl(var(--data-cyan) / 0.4);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px hsl(var(--data-purple) / 0.4);
+  }
+
+  .glow-animated {
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  .neural-pulse {
+    animation: neural-pulse 3s ease-in-out infinite;
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg,
+        transparent 0%,
+        hsl(var(--foreground) / 0.05) 50%,
+        transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .card-premium {
+    @apply bg-glass-hover rounded-xl p-6;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--data-cyan) / 0.5), transparent);
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--data-cyan)), hsl(var(--data-purple)));
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px hsl(var(--data-cyan) / 0.3);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-glass border border-border;
+  }
+
+  .btn-secondary:hover {
+    @apply border-primary/50 bg-card/90;
+    transform: translateY(-2px);
+  }
+}
