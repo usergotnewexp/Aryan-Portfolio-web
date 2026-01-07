@@ -1,14 +1,14 @@
 import { BlogPost } from "../_types/blog"
 
 export const blogPosts: BlogPost[] = [
-    {
-        id: 4,
-        title: "WordPress Blog",
-        description: "My latest thoughts and updates from my WordPress blog.",
-        date: "March 19, 2024",
-        readingTime: "5 min read",
-        slug: "wordpress-blog"
-    },
+    // {
+    //     id: 4,
+    //     title: "WordPress Blog",
+    //     description: "My latest thoughts and updates from my WordPress blog.",
+    //     date: "March 19, 2024",
+    //     readingTime: "5 min read",
+    //     slug: "wordpress-blog"
+    // },
     {
         id: 3,
         title: "Autograd Logic",
