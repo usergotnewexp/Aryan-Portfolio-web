@@ -2,45 +2,7 @@
 
 A minimalistic personal blog and learning documentation website built with Next.js, Tailwind, and TypeScript.
 
-## Want to use this code for your own site?
 
-You are free to copy any part of this repository or even the entire thing. All I ask of you is to star this repository if you found it useful and maybe provide some credit & shoutout if you're feeling kind (but you don't have to if your vibes are not into these) :)
-
-## Installation
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/sumitdotml/website.git
-```
-
-2. Go to the project directory
-
-```bash
-cd website
-```
-
-3. Install dependencies
-
-```bash
-npm install
-```
-
-4. Run the development server
-
-```bash
-npm run dev
-```
-
-5. Open the website in your browser
-
-```bash
-http://localhost:3000
-```
-
-You may run into some issues when doing `npm install` because of the dependencies. You can always ask our AI friends to help you out. :)
-
-If there are any errors, issues or suggestions, please feel free to [open a new issue](https://github.com/sumitdotml/website/issues/new).
 
 ## Tools used
 
