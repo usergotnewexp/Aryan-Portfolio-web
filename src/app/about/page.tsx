@@ -70,14 +70,14 @@ export default function AboutPage() {
                     className="mb-8"
                 >
                     <Text className="text-lg leading-relaxed mb-4">
-                        I'm <span className="font-semibold text-primary">Aryan Gahlot</span>,
+                        I&apos;m <span className="font-semibold text-primary">Aryan Gahlot</span>,
                         an ECE undergrad with a deep passion for <span className="text-gradient font-semibold">data science</span>,
                         <span className="text-gradient font-semibold"> machine learning</span>, and the
                         mathematics that powers intelligent systems.
                     </Text>
                     <Text className="leading-relaxed text-muted-foreground">
                         While my degree is in electronics, my heart is in algorithms, code, and
-                        understanding how raw data transforms into actionable insights. I'm a
+                        understanding how raw data transforms into actionable insights. I&apos;m a
                         self-taught practitioner who believes in learning by building.
                     </Text>
                 </motion.div>
@@ -132,10 +132,10 @@ export default function AboutPage() {
                         💡 My Philosophy
                     </TextHeading>
                     <Text className="leading-relaxed">
-                        I believe in understanding the <em>"why"</em> behind systems, not just
-                        using them. Whether it's implementing regression from scratch or building
-                        a neural network, I enjoy diving deep into the fundamentals. Learning isn't
-                        a phase for me—it's how I approach everything.
+                        I believe in understanding the <em>&quot;why&quot;</em> behind systems, not just
+                        using them. Whether it&apos;s implementing regression from scratch or building
+                        a neural network, I enjoy diving deep into the fundamentals. Learning isn&apos;t
+                        a phase for me—it&apos;s how I approach everything.
                     </Text>
                 </motion.div>
 
@@ -147,12 +147,12 @@ export default function AboutPage() {
                     className="mt-8"
                 >
                     <TextHeading as="h2" className="text-xl font-semibold mb-3">
-                        🎯 What I'm Looking For
+                        🎯 What I&apos;m Looking For
                     </TextHeading>
                     <Text className="leading-relaxed text-muted-foreground">
-                        I'm actively seeking opportunities in <span className="text-foreground font-medium">data science</span>,
+                        I&apos;m actively seeking opportunities in <span className="text-foreground font-medium">data science</span>,
                         <span className="text-foreground font-medium"> ML engineering</span>, or
-                        <span className="text-foreground font-medium"> AI research</span>. I'm excited
+                        <span className="text-foreground font-medium"> AI research</span>. I&apos;m excited
                         about roles where I can apply my skills to solve meaningful problems and
                         continue growing as a practitioner.
                     </Text>
